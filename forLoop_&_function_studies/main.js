@@ -250,39 +250,75 @@ const pizzas = [
 
 // # 5. Ecrire une fonction qui prend en parametre un ingredient et qui retourne un tableau des noms des pizzas qui ont cet ingredient
 
-console.table(pizzaName(pizzas))
+// console.log(pizzaName(pizzas))
 
-function pizzaName(tab){
-    let pizzaNames =[]   
-    for (i = 0 ; i < tab.length ; i++){
-        pizzaNames.push(tab[i].name)
-    }return pizzaNames
-}
+// function pizzaName(tab){
+//     let pizzaNames =[]   
+//     for (i = 0 ; i < tab.length ; i++){
+//         pizzaNames.push(tab[i].name)
+//     }return pizzaNames
+// }
+// /-----------------------------------------------------------------/
+// console.log(pizzaPrices(pizzas))
 
-console.log(pizzaPrices(pizzas))
+// function pizzaPrices(price){
+//     let pizzaMeanPrices = 0
+//     for (i = 0 ; i < price.length ; i++){
+//         pizzaMeanPrices += price[i].price
+//     }
+//     pizzaMeanPrices /= price.length
+//     return pizzaMeanPrices.toFixed(2)
+// }
+// -------------------------------------------------------------------------
+// console.log(getIngredientsByPizzaName ('Regina',pizzas));
 
-function pizzaPrices(price){
-    let pizzaMeanPrices = 0
-    for (i = 0 ; i < price.length ; i++){
-        pizzaMeanPrices += price[i].price
-    }
-    pizzaMeanPrices /= price.length
-    return pizzaMeanPrices.toFixed(2)
-}
-
-console.log(getIngredientsByPizzaName ('Regina',pizzas));
-
-function getIngredientsByPizzaName(name, arr){
-    let ingredients = []
-    for (i = 0 ; i < arr.length ; i++){
-        ingredients.push(arr[i].ingredients)
-    }
-    return ingredients
-}
-
-//     for (let i = 0; i < myNumbers.length; i++){
-//         if (myNumbers[i] > res3){
-//             tab.push(myNumbers[i])
+// function getIngredientsByPizzaName(name, arr){
+//     let targetPizza
+//     for (i = 0 ; i < arr.length ; i++){
+//         if (arr[i].name === name){
+//             targetPizza = arr[i];
+//             break;
 //         }
 //     }
-//     return tab
+
+//     let ingredients = []
+//     if(targetPizza){
+//         ingredients = targetPizza.ingredients
+//     }
+
+//     return targetPizza.ingredients
+// }
+// ----------------------------------------------------------------------------
+// const res1 = getAllIngredients(pizzas)
+// console.log(res1);
+// function getAllIngredients(array){
+//     let allIngredients = []
+
+//     for (let i = 0; i < array.length; i++){
+//         const currentPizza = array[i]
+//         for(let j = 0; j < currentPizza.ingredients.length; j++){
+//             allIngredients.push(currentPizza.ingredients[j])
+
+//         }
+//     }
+
+//     return allIngredients
+// }
+// ------------------------------------------------------------------------------
+const res2 = chooseIngredient('miel',pizzas)
+console.log(res2);
+function chooseIngredient(ingredientName,arr){
+    let pizzasName = []; 
+    for (i = 0 ; i < arr.length ; i++){
+        const currentPizza = arr[i]
+        if(currentPizza.ingredients.includes(ingredientName)){
+            pizzasName.push(currentPizza.name)
+        }
+
+        }
+        return pizzasName
+    }
+
+
+
+
