@@ -1,0 +1,73 @@
+:root{
+    --dark-blue: #222831;
+    --soft-blue: #2d4059;
+    --red:#ff5722;
+    --grey: #eeeeee;
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url(font/Lato-Regular.ttf);
+  }
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Lato";
+    background-color: #101116;
+  }
+
+.container{
+  background-color: #222831;
+  max-width: 850px;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 5px (0,0,0,0,0.3);
+  margin:30px auto
+}
+
+h1{
+  font-size: 40px;
+  text-align: center;
+}
+
+.inputs-container{
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.input-group input{
+  min-width: 250px;
+  margin-bottom: 10px;
+}
+
+.form-btn {
+  background-color: rgb(255, 10, 51);
+  margin: 40px auto;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  
+}
+
+.form-btn:hover{
+  background-color: #222831;
+  border: 1px solid rgb(255, 10, 51);
+}
+
+.bmi-value {
+  text-align: center;
+}
+
+.description{
+  text-align: center;
+}
