@@ -32,7 +32,7 @@
 // function onClick() {
 //     mainContainer.style.backgroundColor = input.value
 // }
-const BMIData = [
+const bmiData = [
     { name: "Maigreur", color: "midnightblue", range: [0, 18.5] },
     { name: "Bonne santé", color: "green", range: [18.5, 25] },
     { name: "Surpoids", color: "lightcoral", range: [25, 30] },
@@ -59,17 +59,18 @@ const BMIData = [
       }
 
       const bmi = (weight.value / (height.value / 100)**2).toFixed(1)
+      // const bmi = (weight.value / Math.pow((height.value / 100),2)).toFixed(1)
   showResult(bmi)
 }
 
 function showResult(bmi) {
     let rank;
-    for (let i = 0; i < BMIData.length; i++) {
-      const data = BMIData[i];
+    for (let i = 0; i < bmiData.length; i++) {
+      const data = bmiData[i];
       if (bmi > data.range[0] && bmi <= data.range[1]) {
         rank = data
         break
-      } else if (typeof data.range === 'number' && data.range >= 40) {
+      } else if (typeof data.range === 'number' && bmi >= data.range) {
         rank = data;
       }
     }
