@@ -54,6 +54,55 @@ form2.addEventListener('click', onClick)
         return diffDays;
     }
 
+// for (let i = 0; i < input3.length; i++) {
+//     input3[i].addEventListener('input',onInput3Change);
+// }
+
+// input3[1].addEventListener('input', onInput3Change)
+
+// function onInput3Change(){
+//     let result=getDaysBetweenDates(input3[1].value, input3[0])
+// }
+
+
+
+//     <!-- EVENT3 -->
+//     <div class="event betweenTime">
+//         <label for="timeOne">Start time:
+//           <input class="timeOne" type="time" id="timeOne">
+//         </label>
+//         <label for="timeTwo">End time:
+//           <input class="timeTwo" type="time" id="timeTwo">
+//         </label>
+//         Hang Time:
+//         <span class="hangTime" id="hangTime"></span>
+//       </div>
+
+// // EVENT3
+// const timeOne = document.querySelector('.timeOne');
+// const timeTwo = document.querySelector('.timeTwo');
+// const hangTime = document.querySelector('.hangTime');
+
+// // Function to calculate the time difference in hours and minutes
+// function timeDiff(timeOne, timeTwo) {
+// const diff = (timeTwo - timeOne) / 1000; // Difference in seconds
+// const hours = Math.floor(diff / 3600); // Calculate the whole number of hours
+// const minutes = Math.floor((diff % 3600) / 60); // Calculate the remaining minutes
+// return { hours, minutes };
+// }
+
+// // Event listener for timeOne input
+// timeOne.addEventListener('change', () => {
+// const { hours, minutes } = timeDiff(new Date(2000-01-01T${timeOne.value}), new Date(2000-01-01T${timeTwo.value}));
+// hangTime.textContent = ${hours} hours ${minutes} minutes;
+// });
+
+// // Event listener for timeTwo input
+// timeTwo.addEventListener('change', () => {
+// const { hours, minutes } = timeDiff(new Date(2000-01-01T${timeOne.value}), new Date(2000-01-01T${timeTwo.value}));
+// hangTime.textContent = ${hours} hours ${minutes} minutes;
+// });
+
 const text4 = document.querySelector('.text-to-display-5')
 const input4 = document.querySelector('.input-5')
 

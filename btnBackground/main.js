@@ -33,29 +33,26 @@ const container = document.querySelector('.container')
 const mainContainer = document.querySelector('.main-container')
 const btn = document.querySelector('.main-btn')
 
-const colors = ['#ff0000','#ff2000','#ff4000','#ff8000','#ffa000','#fff000','#fff200','#fff400','#fff800','#fffa00']
 
-btn.addEventListener('click',onBtnClick)
+btn.addEventListener('click', onBtnClick)
 
-let nbClick = 0
-
-
-
-
-function onBtnClick(){
-    for(let i = 0; i < 10 ; i++){
-        for (let j = 0; j < 10 ; j++){
-        const newDiv = document.createElement("div")
-        newDiv.classList.add('new-div')
-        mainContainer.appendChild(newDiv)
-        newDiv.style.left = `${j}0vw`
-        newDiv.style.top = `${i}0vh`
-        newDiv.style.backgroundColor = colors
+function onBtnClick() {
+    mainContainer.textContent = ''
+    let nbBlock = 0;
+    for (let line = 0; line < 10; line++) {
+        for (let col = 0; col < 10; col++) {
+            (function (c, l) {
+                setTimeout(function () {
+                    const newDiv = document.createElement("div");
+                    mainContainer.appendChild(newDiv)
+                    newDiv.classList.add('new-div')
+                    newDiv.style.left =Math.floor((Math.random()*10))*10 + `vw`
+                    newDiv.style.top =Math.floor((Math.random()*10))*10 + `vh`
+                    newDiv.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0")
+                }, 50 * nbBlock)
+            })(col,line)
+            nbBlock++  
         }
-    } 
-    function colors(){
-        (Math.random()*10).toFixed(0)
     }
-
 }
 
