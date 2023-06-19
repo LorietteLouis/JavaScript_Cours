@@ -31,26 +31,25 @@ form2.addEventListener('click', onClick)
     text2.textContent = input2.value;
     }
 
+    
     const text3 = document.querySelector('.text-to-display-4')
     const input3 = document.querySelectorAll('.input-4')
     
     const difference = 0;
     
-    input3[0].addEventListener('change', startDate)
-    function startDate(){
+    input3[0].addEventListener('change', (e) => {
         text3.textContent = `Trip last ${getDifferenceBetweenDates(input3[0].value, input3[1].value)} days`
-    }
+    })
     
-    input3[1].addEventListener('change', endDate)
-    function endDate(){
+    input3[1].addEventListener('change', (e) => {
         text3.textContent = `Trip last ${getDifferenceBetweenDates(input3[0].value, input3[1].value)} days`
-    }
+    })
     
     function getDifferenceBetweenDates(d1, d2) {
         const date1 = new Date(d1);
         const date2 = new Date(d2);
         const diffTime = Math.abs(date2 - date1);
-        const diffDays = Math.ceil(diffTime / (3600 * 1000 * 24));
+        const diffDays = Math.ceil(diffTime / (1000 * 3600 * 24));
         return diffDays;
     }
 

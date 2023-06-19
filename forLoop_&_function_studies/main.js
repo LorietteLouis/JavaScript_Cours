@@ -305,7 +305,7 @@ const pizzas = [
 //     return allIngredients
 // }
 // ------------------------------------------------------------------------------
-const res2 = chooseIngredient('miel',pizzas)
+const res2 = chooseIngredient('tomate',pizzas)
 console.log(res2);
 function chooseIngredient(ingredientName,arr){
     let pizzasName = []; 
