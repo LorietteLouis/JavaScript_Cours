@@ -1,0 +1,39 @@
+body {
+    background-color: #131313 !important;
+  }
+  
+
+.nav {
+  background-color: goldenrod;
+}
+
+.container-fluid{
+  background-color: goldenrod;
+  color: white
+
+}
+
+
+  .ratings i {
+    color: gold;
+  }
+  
+  .rate {
+    color: gold;
+  }
+  
+  .install span {
+    font-size: 12px;
+  }
+  
+  .col-md-4 {
+    margin-top: 27px;
+  }
+  
+  .custom-margin {
+    margin-left: 1em;
+  }
+  
+  .form-select {
+    width: 150px !important;
+  }
